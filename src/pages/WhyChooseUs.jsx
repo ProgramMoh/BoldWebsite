@@ -9,7 +9,7 @@ const BrainBgIcon = ({ isVisible }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
-    className={`absolute -top-28 -right-24 h-[600px] w-[600px] text-gray-500 transition-all duration-[1500ms] ease-in-out ${
+    className={`absolute -top-28 -right-24 h-[600px] w-[600px] text-gray-500 dark:text-gray-100 transition-all duration-[1500ms] ease-in-out ${
       isVisible ? 'opacity-40 scale-100' : 'opacity-0 scale-95'
     }`}
     fill="currentColor"
@@ -20,7 +20,7 @@ const BrainBgIcon = ({ isVisible }) => (
 
 const BeakerBgIcon = ({ isVisible }) => (
   <svg
-    className={`absolute top-52 -right-20 h-[600px] w-[600px] text-gray-600 transition-all duration-[1500ms] ease-in-out ${
+    className={`absolute top-52 -right-20 h-[600px] w-[600px] text-gray-600 dark:text-gray-100 transition-all duration-[1500ms] ease-in-out ${
       isVisible ? 'opacity-40 scale-100' : 'opacity-0 scale-95'
     }`}
     fill="currentColor"
@@ -31,7 +31,7 @@ const BeakerBgIcon = ({ isVisible }) => (
 
 const SpeedBgIcon = ({ isVisible }) => (
   <svg
-    className={`absolute -bottom-96 -left-64 h-[1000px] w-[1000px] text-gray-400 transition-all duration-[1500ms] ease-in-out ${
+    className={`absolute -bottom-96 -left-64 h-[1000px] w-[1000px] text-gray-400 dark:text-gray-50 transition-all duration-[1500ms] ease-in-out ${
       isVisible ? 'opacity-40 scale-100' : 'opacity-0 scale-95'
     }`}
     fill="currentColor"
