@@ -1,10 +1,10 @@
 import { useContext, useState, useEffect } from "react";
-import { CartContext } from "../cartContext.jsx"; // Ensure this path is correct
-import energy from "../assets/energy.png"; // Ensure this path is correct
-import herbal from "../assets/herbal.png"; // Ensure this path is correct
-import focus from "../assets/focus.png"; // Ensure this path is correct
-import recovery from "../assets/recovery.png"; // Ensure this path is correct
-import Modal from "../components/Modal.jsx"; // Ensure this path is correct
+import { CartContext } from "../cartContext.jsx";
+import energy from "../assets/energy.png";
+import herbal from "../assets/herbal.png";
+import focus from "../assets/focus.png";
+import recovery from "../assets/recovery.png";
+import Modal from "../components/Modal.jsx";
 
 const products = [
   { 
@@ -68,7 +68,7 @@ function Products() {
   };
 
   return (
-    <div className="min-h-[85vh] bg-green-50 p-4 dark:bg-gray-900 sm:p-8">
+    <div className="min-h-[85vh] bg-blue-50 p-4 dark:bg-gray-900 sm:p-8">
       {/* --- Page Header --- */}
       <div className="mb-12 text-center">
         <h1 
@@ -90,7 +90,7 @@ function Products() {
         {categories.map((cat) => (
           <button
             key={cat}
-            className={`rounded-md px-4 py-2 font-semibold transition-all duration-300 ${filter === cat ? "bg-green-600 text-white shadow-md" : "bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"}`}
+            className={`rounded-md px-4 py-2 font-semibold transition-all duration-300 ${filter === cat ? "bg-blue-600 text-white shadow-md" : "bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"}`}
             onClick={() => setFilter(cat)}
           >
             {cat}
@@ -111,7 +111,7 @@ function Products() {
             <div className="w-full p-4 text-center">
               <h2 className="text-xl font-bold text-gray-800 dark:text-white">{p.name}</h2>
               <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">{p.description}</p>
-              <p className="text-lg font-semibold text-green-600">{p.price}</p>
+              <p className="text-lg font-semibold text-blue-600">{p.price}</p>
             </div>
           </div>
         ))}

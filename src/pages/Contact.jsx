@@ -71,11 +71,11 @@ function Contact() {
     setTimeout(() => setSuccess(""), 5000);
   }
 
-  const inputClass = "w-full rounded-md border-2 border-transparent bg-white p-3 shadow-lg transition duration-300 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white";
+  const inputClass = "w-full rounded-md border-2 border-transparent bg-white p-3 shadow-lg transition duration-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white";
   const errorClass = "mt-1 text-sm text-red-500";
 
   return (
-    <div className="min-h-[82vh] bg-green-50 px-4 py-16 dark:bg-gray-800 sm:px-6 lg:px-8">
+    <div className="min-h-[82vh] bg-blue-50 px-4 py-16 dark:bg-gray-800 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
         {/* Header */}
         <div className={`text-center transition-all duration-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
@@ -89,24 +89,28 @@ function Contact() {
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Contact Info */}
           <div className={`flex flex-col gap-8 transition-all duration-700 ease-out ${isLoaded ? 'translate-x-0 opacity-100 delay-200' : '-translate-x-4 opacity-0'}`}>
-            <div className="flex items-start gap-4 rounded-lg bg-green-600 p-6 text-white shadow-lg dark:bg-gray-700">
-              <LocationIcon />
-              <div>
-                <h3 className="text-xl font-semibold">Our Location</h3>
-                <p className="mt-1 text-green-100 dark:text-gray-300">123 Nature Path, Calgary, AB, Canada</p>
-              </div>
+            <div className="flex items-start gap-4 rounded-lg bg-blue-800 p-6 text-white shadow-lg dark:bg-gray-700">
+              <div className="md:col-span-2">
+            <h4 className="font-sora text-lg font-semibold">Contact Us</h4>
+            <ul className="mt-4 space-y-3 text-sm">
+              <li className="flex items-center gap-3">
+                <LocationIcon />
+                <span className="text-blue-50">6101 N Hollywood Blvd, Ste 120 Las Vegas, Nv. 89115</span>
+              </li>
+            </ul>
+          </div>
             </div>
-            <div className="flex items-start gap-4 rounded-lg bg-green-600 p-6 text-white shadow-lg dark:bg-gray-700">
+            <div className="flex items-start gap-4 rounded-lg bg-blue-800 p-6 text-white shadow-lg dark:bg-gray-700">
               <MailIcon />
               <div>
                 <h3 className="text-xl font-semibold">Email Us</h3>
-                <p className="mt-1 text-green-100 dark:text-gray-300">Our team is here to help. Drop us a line for any inquiries.</p>
+                <p className="mt-1 text-blue-50 dark:text-gray-300">Our team is here to help. Drop us a line for any inquiries.</p>
                 <a href="mailto:contact@mybrand.com" className="mt-2 inline-block font-semibold underline">contact@mybrand.com</a>
               </div>
             </div>
-            <div className="rounded-lg bg-green-600 p-6 text-white shadow-lg dark:bg-gray-700">
+            <div className="rounded-lg bg-blue-800 p-6 text-white shadow-lg dark:bg-gray-700">
                 <h3 className="text-xl font-semibold">Follow Our Journey</h3>
-                <p className="mt-1 text-green-100 dark:text-gray-300">Check out our socials for updates and news.</p>
+                <p className="mt-1 text-blue-50 dark:text-gray-300">Check out our socials for updates and news.</p>
                 <div className="mt-3 flex gap-4">
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110"><FacebookIcon /></a>
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110"><InstagramIcon /></a>
@@ -120,7 +124,7 @@ function Contact() {
           <div className={`flex flex-col transition-all duration-700 ease-out ${isLoaded ? 'translate-x-0 opacity-100 delay-300' : 'translate-x-4 opacity-0'}`}>
             {success ? (
               <div className="flex h-full items-center justify-center rounded-lg bg-white p-8 text-center shadow-lg dark:bg-gray-700">
-                <p className="text-2xl font-semibold text-green-600">{success}</p>
+                <p className="text-2xl font-semibold text-blue-800">{success}</p>
               </div>
             ) : (
               // --- CHANGE 2: Added flex-grow to the form ---
@@ -140,7 +144,7 @@ function Contact() {
                   <textarea name="message" id="message" value={form.message} onChange={handleChange} placeholder="Your Message" rows="5" className={inputClass}></textarea>
                   {errors.message && <p className={errorClass}>{errors.message}</p>}
                 </div>
-                <button className="transform rounded-md bg-green-600 px-6 py-3 font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-green-700 active:scale-95">
+                <button className="transform rounded-md bg-blue-800 px-6 py-3 font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-blue-600 active:scale-95">
                   Send Message
                 </button>
               </form>
