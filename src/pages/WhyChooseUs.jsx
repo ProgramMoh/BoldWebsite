@@ -10,7 +10,7 @@ const BrainBgIcon = ({ isVisible }) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
     className={`absolute -top-28 -right-24 h-[600px] w-[600px] text-gray-500 dark:text-gray-100 transition-all duration-[1500ms] ease-in-out ${
-      isVisible ? 'opacity-40 scale-100' : 'opacity-0 scale-95'
+      isVisible ? 'opacity-40 scale-100 translate-x-0' : 'opacity-0 scale-95 translate-x-1/2'
     }`}
     fill="currentColor"
   >
@@ -20,8 +20,8 @@ const BrainBgIcon = ({ isVisible }) => (
 
 const BeakerBgIcon = ({ isVisible }) => (
   <svg
-    className={`absolute top-52 -right-20 h-[600px] w-[600px] text-gray-600 dark:text-gray-100 transition-all duration-[1500ms] ease-in-out ${
-      isVisible ? 'opacity-40 scale-100' : 'opacity-0 scale-95'
+    className={`absolute top-52 -right-60 h-[800px] w-[800px] text-gray-600 dark:text-gray-100 transition-all duration-[1500ms] ease-in-out ${
+      isVisible ? 'opacity-40 scale-100 translate-x-0' : 'opacity-0 scale-95 translate-x-1/2'
     }`}
     fill="currentColor"
   >
@@ -31,8 +31,8 @@ const BeakerBgIcon = ({ isVisible }) => (
 
 const SpeedBgIcon = ({ isVisible }) => (
   <svg
-    className={`absolute -bottom-96 -left-64 h-[1000px] w-[1000px] text-gray-400 dark:text-gray-50 transition-all duration-[1500ms] ease-in-out ${
-      isVisible ? 'opacity-40 scale-100' : 'opacity-0 scale-95'
+    className={`absolute -bottom-96 -right-36 h-[1000px] w-[1000px] text-gray-400 dark:text-gray-50 transition-all duration-[1500ms] ease-in-out ${
+      isVisible ? 'opacity-40 scale-100 translate-x-0' : 'opacity-0 scale-95 translate-x-1/2'
     }`}
     fill="currentColor"
     viewBox="0 0 24 24"
@@ -56,21 +56,21 @@ function WhyChooseUs() {
             number: "01",
             title: "Mood, Focus & Clarity",
             description: "AQA GABA (Gamma-aminobutyric acid), Beta-Alanine, L-Arginine, and L-Citrulline DL Malate work synergistically to promote mental clarity, improve focus, and enhance multitasking abilities.",
-            indentClass: "md:-ml-24",
+            indentClass: "md:-ml-36",
             overlayClass: "overlay-mental",
         },
         {
             number: "02",
             title: "Enhanced Nutrients",
             description: "Vitamin B3 Niacin B3, Vitamin B12, and Calcium provide essential nutrients for energy metabolism and cellular health, helping you maintain optimal performance throughout the day",
-            indentClass: "md:ml-24",
+            indentClass: "md:-ml-24",
             overlayClass: "overlay-beakers",
         },
         {
             number: "03",
             title: "Stamina & Endurance",
             description: "72 Trace Electrolytes, Brain Energy supports heart health, stamina, and overall endurance, enabling you to perform at your peak for longer durations.",
-            indentClass: "md:ml-48",
+            indentClass: "md:-ml-12",
             overlayClass: "overlay-speed",
         }
     ];

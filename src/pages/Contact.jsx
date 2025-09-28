@@ -71,7 +71,7 @@ function Contact() {
     setTimeout(() => setSuccess(""), 5000);
   }
 
-  const inputClass = "w-full rounded-md border-2 border-transparent bg-white p-3 shadow-lg transition duration-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white";
+  const inputClass = "w-full rounded-md border-2 border-transparent bg-white p-3 shadow-lg transition duration-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-gray-200 dark:text-black dark:border-blue-500 dark:placeholder:text-gray-600";
   const errorClass = "mt-1 text-sm text-red-500";
 
   return (
@@ -89,7 +89,7 @@ function Contact() {
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Contact Info */}
           <div className={`flex flex-col gap-8 transition-all duration-700 ease-out ${isLoaded ? 'translate-x-0 opacity-100 delay-200' : '-translate-x-4 opacity-0'}`}>
-            <div className="flex items-start gap-4 rounded-lg bg-blue-800 p-6 text-white shadow-lg dark:bg-gray-700">
+            <div className="flex items-start gap-4 rounded-lg bg-blue-800 p-6 text-white shadow-lg">
               <div className="md:col-span-2">
             <h4 className="font-sora text-lg font-semibold">Contact Us</h4>
             <ul className="mt-4 space-y-3 text-sm">
@@ -100,7 +100,7 @@ function Contact() {
             </ul>
           </div>
             </div>
-            <div className="flex items-start gap-4 rounded-lg bg-blue-800 p-6 text-white shadow-lg dark:bg-gray-700">
+            <div className="flex items-start gap-4 rounded-lg bg-blue-800 p-6 text-white shadow-lg">
               <MailIcon />
               <div>
                 <h3 className="text-xl font-semibold">Email Us</h3>
@@ -108,7 +108,7 @@ function Contact() {
                 <a href="mailto:contact@mybrand.com" className="mt-2 inline-block font-semibold underline">contact@mybrand.com</a>
               </div>
             </div>
-            <div className="rounded-lg bg-blue-800 p-6 text-white shadow-lg dark:bg-gray-700">
+            <div className="rounded-lg bg-blue-800 p-6 text-white shadow-lg">
                 <h3 className="text-xl font-semibold">Follow Our Journey</h3>
                 <p className="mt-1 text-blue-50 dark:text-gray-300">Check out our socials for updates and news.</p>
                 <div className="mt-3 flex gap-4">
@@ -124,11 +124,11 @@ function Contact() {
           <div className={`flex flex-col transition-all duration-700 ease-out ${isLoaded ? 'translate-x-0 opacity-100 delay-300' : 'translate-x-4 opacity-0'}`}>
             {success ? (
               <div className="flex h-full items-center justify-center rounded-lg bg-white p-8 text-center shadow-lg dark:bg-gray-700">
-                <p className="text-2xl font-semibold text-blue-800">{success}</p>
+                <p className="text-2xl font-semibold text-blue-800 dark:text-white">{success}</p>
               </div>
             ) : (
               // --- CHANGE 2: Added flex-grow to the form ---
-              <form onSubmit={handleSubmit} className="flex flex-grow flex-col gap-6 rounded-lg bg-white p-8 shadow-lg dark:bg-gray-700">
+              <form onSubmit={handleSubmit} className="flex flex-grow flex-col gap-8 rounded-lg bg-white p-8 shadow-xl dark:bg-gray-700">
                 <div>
                   <label htmlFor="name" className="sr-only">Name</label>
                   <input type="text" name="name" id="name" value={form.name} onChange={handleChange} placeholder="Your Name" className={inputClass} />
@@ -144,7 +144,7 @@ function Contact() {
                   <textarea name="message" id="message" value={form.message} onChange={handleChange} placeholder="Your Message" rows="5" className={inputClass}></textarea>
                   {errors.message && <p className={errorClass}>{errors.message}</p>}
                 </div>
-                <button className="transform rounded-md bg-blue-800 px-6 py-3 font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-blue-600 active:scale-95">
+                <button className="transform rounded-md bg-blue-800 px-6 py-3 font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-blue-600 active:scale-95 dark:bg-brand-accent dark:text-brand-dark dark:hover:bg-yellow-300">
                   Send Message
                 </button>
               </form>
