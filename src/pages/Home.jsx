@@ -2,23 +2,6 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import sliderimage from "../assets/slider-1v2.png";
 
-// Icons (unchanged)
-const LeafIcon = () => (
-  <svg className="h-12 w-12 text-blue-600 dark:text-brand-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-);
-const GlobeIcon = () => (
-  <svg className="h-12 w-12 text-blue-600 dark:text-brand-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1.945M12 4.5v.01M12 8.5v.01M12 12.5v.01M12 16.5v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-);
-const BeakerIcon = () => (
-  <svg className="h-14 w-12 text-blue-600 dark:text-brand-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547a2 2 0 00-.547 1.806l.443 2.387a6 6 0 00.517 3.86l.158.318a6 6 0 003.86.517l2.387.443a2 2 0 001.806-.547a2 2 0 00.547-1.806l-.443-2.387a6 6 0 00-.517-3.86l-.158-.318a6 6 0 00-3.86-.517z" />
-  </svg>
-);
-
 function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
 
