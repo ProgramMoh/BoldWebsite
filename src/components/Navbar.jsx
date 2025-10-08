@@ -44,12 +44,12 @@ function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-40 flex h-32 items-center justify-between bg-blue-900 p-4 px-6 text-white shadow-md dark:bg-brand-dark">
+      <nav className="sticky top-0 z-40 flex h-24 md:h-32 items-center justify-between bg-blue-900 p-4 px-6 text-white shadow-md dark:bg-brand-dark">
         <Link 
           to="/" 
           className="transition-transform duration-300 hover:scale-105"
         >
-          <img src={brandLogo} alt="MyBrand logo" className="h-28 w-56" />
+          <img src={brandLogo} alt="MyBrand logo" className="h-18 w-36 md:h-28 md:w-56" />
         </Link>
 
         <div className={`
@@ -82,7 +82,7 @@ function Navbar() {
           </div>
         </div>
         
-        <button className="z-50 md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button className="z-40 md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <MenuIcon />
         </button>
       </nav>
